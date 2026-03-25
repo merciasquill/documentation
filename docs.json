@@ -20,6 +20,10 @@
           {
             "group": "Configuration Options",
             "pages": ["config-data/gamertag-nicknames"]
+          },
+          {
+            "group": "Error Messages",
+            "pages": ["error-messages/discord-bot"]
           }
         ]
       },
