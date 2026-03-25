@@ -15,7 +15,7 @@
         "groups": [
           {
             "group": "Sea of Thieves API",
-            "pages": ["sea-of-thieves-api/auth", "sea-of-thieves-api/extension"]
+            "pages": ["sea-of-thieves-api/authentication", "sea-of-thieves-api/extension"]
           },
           {
             "group": "Configuration Options",
