@@ -15,15 +15,10 @@
         "groups": [
           {
             "group": "Sea of Thieves API",
-            "pages": ["sea-of-thieves-api/authentication", "sea-of-thieves-api/extension"]
-          },
-          {
-            "group": "Configuration Options",
-            "pages": ["config-data/gamertag-nicknames"]
-          },
-          {
-            "group": "Error Messages",
-            "pages": ["error-messages/discord-bot"]
+            "pages": [
+              "sea-of-thieves-api/authentication",
+              "sea-of-thieves-api/extension"
+            ]
           }
         ]
       },
@@ -41,6 +36,22 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete"
             ]
+          }
+        ]
+      },
+      {
+        "tab": "Discord Bot",
+        "groups": [
+            {
+            "group": "Available Commands",
+            "pages": ["discord-bot/available-commands/base-commands"]
+          }, {
+            "group": "Configuration Options",
+            "pages": ["discord-bot/config-data/gamertag-nicknames"]
+          },
+          {
+            "group": "Error Messages",
+            "pages": ["discord-bot/error-messages/discord-bot"]
           }
         ]
       }
