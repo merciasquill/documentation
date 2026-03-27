@@ -1,0 +1,74 @@
+---
+title: "Browser Extension"
+description: "Learn how to configure the Mercia's Quill browser extension to control how your data is stored and managed"
+icon: "puzzle-piece"
+---
+
+## Installation
+
+<Tabs>
+  <Tab title="Chromium" >
+   For all <Tooltip tip="Chrome, Brave, Opera, etc.">Chromium-based</Tooltip> browsers, you can install the Mercia's Quill extension from the native [Chrome Web Store](https://merciasquill.com/extension?chromium).
+
+  </Tab>
+
+  <Tab title="Microsoft Edge">
+    For Microsoft Edge, you can install the Mercia's Quill extension from the native [Edge Add-ons](https://merciasquill.com/extension?edge), or the [Chrome Web Store](https://merciasquill.com/extension?chromium).
+
+    <Note>
+      Edge Add-ons can take up to 2 weeks longer than the Chrome Web Store to
+      approve any updates to extensions.
+    </Note>
+
+  </Tab>
+
+  <Tab title="Mozilla Firefox">
+
+    For Mozilla Firefox, you can install the Mercia's Quill extension from the
+    native [Firefox Add-ons](https://merciasquill.com/extension?firefox).
+
+  </Tab>
+
+  <Tab title="Apple Safari">
+
+    <Info>
+      Due to Apple's developer costs of $99/year, Mercia's Quill will not be
+      supported in Safari for the foreseeable future. Consider installing a
+      different browser to sync your data.
+    </Info>
+
+  </Tab>
+
+  <Tab title="Other">
+    Did we miss a browser? Let us know by reaching out in our Discord [support server](https://merciasquill.com/support).
+  </Tab>
+</Tabs>
+
+---
+
+## Credential Storage Options
+
+Mercia's Quill's extension allows you to configure where your [cookies](/tabs/guides/sea-of-thieves-api/authentication#authentication-values) from seaofthieves.com will be copied to. By default, the extension will use server-side storage unless explicitly opted out.
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Server-Side Storage" icon="server">
+      Your cookies from [seaofthieves.com](https://seaofthieves.com) will be
+      copied for storage internally in Mercia's Quill's databases. This method
+      will also enable background [fetching cycles](#fetch-cycles).
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Client-Side Storage" icon="desktop">
+      Your cookies from [seaofthieves.com](https://seaofthieves.com) will be
+      copied for storage locally in your browser. Mercia's Quill's backend
+      servers will never be able to see your rat token.
+    </Card>
+  </Column>
+</Columns>
+
+---
+
+## Fetch Cycles
+
+Fetch cycles happen in the background when opting into server-side storage and periodically update your sea of thieves data. You are allowed the options of refreshing every 12, 24, 48, or 72 hours, or <Tooltip tip="set to 0">never</Tooltip>. If you want to graph your data without manually refreshing, this is the ideal method with server-side credential storage.

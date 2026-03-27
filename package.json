@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "dev": "mintlify dev",
+    "prettier": "prettier --write \"./**/*.{md,mdx,json}\""
+  },
   "devDependencies": {
-    "mintlify": "^4.2.457"
+    "mintlify": "^4.2.457",
+    "prettier": "^3.8.1"
   }
 }

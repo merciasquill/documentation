@@ -16,9 +16,13 @@
           {
             "group": "Sea of Thieves API",
             "pages": [
-              "sea-of-thieves-api/authentication",
-              "sea-of-thieves-api/extension"
+              "tabs/guides/sea-of-thieves-api/authentication",
+              "tabs/guides/sea-of-thieves-api/extension"
             ]
+          },
+          {
+            "group": "Error Messages",
+            "pages": ["tabs/guides/error-messages/discord-bot"]
           }
         ]
       },
@@ -27,31 +31,29 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": ["api-reference/introduction"]
+            "pages": ["tabs/api-reference/introduction"]
           },
           {
             "group": "Endpoint Examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
+              "tabs/api-reference/endpoint/get",
+              "tabs/api-reference/endpoint/create",
+              "tabs/api-reference/endpoint/delete",
+              "tabs/api-reference/endpoint/put"
             ]
           }
         ]
       },
       {
-        "tab": "Discord Bot",
+        "tab": "Discord Bot Reference",
         "groups": [
-            {
+          {
             "group": "Available Commands",
-            "pages": ["discord-bot/available-commands/base-commands"]
-          }, {
-            "group": "Configuration Options",
-            "pages": ["discord-bot/config-data/gamertag-nicknames"]
+            "pages": ["tabs/discord-bot/available-commands/base-commands"]
           },
           {
-            "group": "Error Messages",
-            "pages": ["discord-bot/error-messages/discord-bot"]
+            "group": "Configuration Options",
+            "pages": ["tabs/discord-bot/config-data/gamertag-nicknames"]
           }
         ]
       }
@@ -60,25 +62,20 @@
       "anchors": [
         {
           "anchor": "Main Dashboard",
-          "href": "https://merciasquill.com",
+          "href": "https://www.merciasquill.com",
           "icon": "sliders"
         },
         {
           "anchor": "Discord Application",
-          "href": "https://merciasquill.com/invite",
+          "href": "https://www.merciasquill.com/invite",
           "icon": "code"
-        },
-        {
-          "anchor": "Browser Extension",
-          "href": "https://merciasquill.com/extension",
-          "icon": "store"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/public/logo/light.svg",
+    "dark": "/public/logo/dark.svg"
   },
   "navbar": {
     "links": [
