@@ -11,8 +11,12 @@ icon: "discord"
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-You have recently used this command and trigged a rate limit. Please wait until requested before using this command again. Note that repeatedly using the same command in a short time will gradually increase rate limit times.
+This is a client-side error caused when recently using the same command in a short timeframe. Please wait until the requested cooldown has ended before using this command again.
 
+<Note>
+  Repeatedly using the same command in a short timeframe will exponentially
+  increase rate limits.
+</Note>
 ### Missing Interaction Handler
 
 <Badge color="red" icon="server">
@@ -21,3 +25,12 @@ You have recently used this command and trigged a rate limit. Please wait until 
 <Badge color="ghost">logged</Badge>
 
 This is an internal service error caused when the associated action or handler function for an interaction could not be found. Please [contact](https://merciasquill.com/support) a developer for further assistance.
+
+### Unexpected Server Error
+
+<Badge color="red" icon="server">
+  server-side
+</Badge>
+<Badge color="ghost">logged</Badge>
+
+This is an internal service error caused for unexpected reasons. If the error repeatedly persists, please [contact](https://merciasquill.com/support) a developer for further assistance.
