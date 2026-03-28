@@ -3,9 +3,9 @@
   "theme": "luma",
   "name": "Mercia's Quill Documentation",
   "colors": {
-    "primary": "#c89439",
-    "light": "#dbc392",
-    "dark": "#c89439"
+    "primary": "#dbc392",
+    "light": "#c89439",
+    "dark": "#dbc392"
   },
   "favicon": "/favicon.ico",
   "navigation": {
@@ -89,7 +89,21 @@
       "discord": "https://discord.com/discovery/applications/1169623628304892045",
       "bluesky": "https://bsky.app/profile/merciasquill.com",
       "twitter": "https://x.com/MerciasQuill",
-      "instagram": "https://www.instagram.com/merciasquill"
+      "instagram": "https://www.instagram.com/merciasquill",
+      "github": "https://github.com/merciasquill/documentation",
+      "x": "https://x.com/MerciasQuill"
     }
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "seo": {
+    "indexing": "all"
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "background": {
+    "decoration": "gradient"
   }
 }
