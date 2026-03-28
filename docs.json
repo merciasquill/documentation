@@ -1,13 +1,20 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
+
   "name": "Mercia's Quill Documentation",
-  "colors": {
-    "primary": "#c89439",
-    "light": "#dbc392",
-    "dark": "#c89439"
+  "logo": {
+    "light": "/public/logo/light.svg",
+    "dark": "/public/logo/dark.svg"
   },
+
   "favicon": "/favicon.ico",
+  "seo": { "indexing": "all" },
+
+  "colors": { "primary": "#c89439", "light": "#dbc392", "dark": "#c89439" },
+  "appearance": { "default": "system" },
+  "background": { "decoration": "windows" },
+
   "navigation": {
     "tabs": [
       {
@@ -73,10 +80,7 @@
       ]
     }
   },
-  "logo": {
-    "light": "/public/logo/light.svg",
-    "dark": "/public/logo/dark.svg"
-  },
+
   "navbar": {
     "primary": {
       "type": "github",
@@ -92,6 +96,7 @@
       }
     ]
   },
+
   "footer": {
     "socials": {
       "github": "https://github.com/merciasquill/documentation",
@@ -116,20 +121,7 @@
       }
     ]
   },
-  "icons": {
-    "library": "fontawesome"
-  },
-  "seo": {
-    "indexing": "all"
-  },
-  "appearance": {
-    "default": "system"
-  },
-  "background": {
-    "decoration": "windows"
-  },
-  "styling": {
-    "latex": true,
-    "eyebrows": "breadcrumbs"
-  }
+
+  "icons": { "library": "fontawesome" },
+  "styling": { "latex": true, "eyebrows": "breadcrumbs" }
 }
