@@ -10,13 +10,14 @@ mode: "default"
 <Card icon="cookie-bite" href="https://web.dev/articles/understanding-cookies" cta="Learn more">
   ### Cookies
 
-  Cookies are small pieces of data stored by the browser and automatically sent with requests to the server when you a visit a page. The [seaofthieves.com](https://seaofthieves.com) primarily uses cookies for the following purposes:
+Cookies are small pieces of data stored by the browser and automatically sent with requests to the server when you a visit a page. The [seaofthieves.com](https://seaofthieves.com) primarily uses cookies for the following purposes:
 
-  - Identify your currently logged in account
-  - Persist your current login session across visits
-  - Store your personal security and privacy preferences
+- Identify your currently logged in account
+- Persist your current login session across visits
+- Store your personal security and privacy preferences
 
-  In this context, Mercia's Quill will access your authentication cookies to impersonate both GET and POST/PUT requests as you.
+In this context, Mercia's Quill will access your authentication cookies to impersonate both GET and POST/PUT requests as you.
+
 </Card>
 
 <br />
@@ -24,12 +25,13 @@ mode: "default"
 <Card icon="bookmark" href="https://react.dev/learn/passing-data-deeply-with-context" cta="Learn more">
   ### React Context
 
-  `APP_PROPS` is a page-level JavaScript variable embedded into every page's script tags when using React contexts. The [seaofthieves.com](https://seaofthieves.com) primarily uses React contexts for the following:
+`APP_PROPS` is a page-level JavaScript variable embedded into every page's script tags when using React contexts. The [seaofthieves.com](https://seaofthieves.com) primarily uses React contexts for the following:
 
-  - Storing quick access to your currently logged in account data
-  - Storing and updating your [CSRF token](#csrf-token)
+- Storing quick access to your currently logged in account data
+- Storing and updating your [CSRF token](#csrf-token)
 
-  In this context, Mercia's Quill will access your csrf token through the `APP_PROPS` context variable to impersonate POST/PUT requests as you.
+In this context, Mercia's Quill will access your csrf token through the `APP_PROPS` context variable to impersonate POST/PUT requests as you.
+
 </Card>
 
 <br />
@@ -37,11 +39,12 @@ mode: "default"
 <Card icon="key" href="https://auth0.com/docs/secure/tokens/access-tokens/json-web-encryption" cta="Learn more">
   ### JSON Web Encryption
 
-  JSON Web Encryption (JWE) is a standard for securely transmitting encrypted data. The [seaofthieves.com](https://seaofthieves.com) primarily uses JWEs for the following:
+JSON Web Encryption (JWE) is a standard for securely transmitting encrypted data. The [seaofthieves.com](https://seaofthieves.com) primarily uses JWEs for the following:
 
-  - Storing and updating your [RAT token](#rat-token)
+- Storing and updating your [RAT token](#rat-token)
 
-  In this context, Mercia's Quill will access your rat JWE to impersonate both any requests as you.
+In this context, Mercia's Quill will access your rat JWE to impersonate both any requests as you.
+
 </Card>
 
 ---
@@ -50,7 +53,8 @@ mode: "default"
 
 ### RAT Token
 
-<Badge color="green">GET</Badge> <Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
+<Badge color="green">GET</Badge> <Badge color="blue">POST</Badge>
+<Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
 
 The `rat` cookie is the primary authentication method of authentication for the seaofthieves.com website and its internal APIs.
 
@@ -60,12 +64,15 @@ The `rat` cookie is the primary authentication method of authentication for the 
 This token is automatically included in requests to the Sea of Thieves API via cookies and is required for accessing all login-protected endpoints. This token is the only value required to generate all other authentication values listed below so it essential to keep safe.
 
 <Danger>
-  The RAT token is essentially a password that will bypass all secondary security methods and allow full control over your account until your password is reset, or the token expires in 6 days.
+  The RAT token is essentially a password that will bypass all secondary
+  security methods and allow full control over your account until your password
+  is reset, or the token expires in 6 days.
 </Danger>
 
 ### User-Agent
 
-<Badge color="green">GET</Badge> <Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
+<Badge color="green">GET</Badge> <Badge color="blue">POST</Badge>
+<Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
 
 The `User-Agent` is a value generated at runtime by your browser and is used to identify your device type and data. To mimic a request made from a real device, this value is copied from your browser's headers.
 
@@ -74,7 +81,8 @@ The `User-Agent` is a value generated at runtime by your browser and is used to 
 
 ### AWFS Token
 
-<Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
+<Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge>
+<Badge color="red">DELETE</Badge>
 
 The `awfs` cookie is a value that is connected to your [CSRF token](#csrf-token). Its true intended purpose is internal and publicly unknown.
 
@@ -83,7 +91,8 @@ The `awfs` cookie is a value that is connected to your [CSRF token](#csrf-token)
 
 ### CSRF Token
 
-<Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
+<Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge>
+<Badge color="red">DELETE</Badge>
 
 The `csrf` page prop is a value made to prevent [cross-site request forgery](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF) attacks. This is meant to ensure that 3rd parties cannot mimic a client-side button / form to change your data. _(Mercia's Quill will override this)_
 
@@ -91,7 +100,8 @@ The `csrf` page prop is a value made to prevent [cross-site request forgery](htt
 - Stored as: `csrf` [React context](#react-context)
 
 <Warning>
-  Mercia's Quill will never use this token or attempt to mimic a POST/PUT request using your credentials unless _explicitly_ prompted by you.
+  Mercia's Quill will never use this token or attempt to mimic a POST/PUT
+  request using your credentials unless _explicitly_ prompted by you.
 </Warning>
 
 ---
@@ -131,10 +141,10 @@ curl 'https://www.seaofthieves.com/api/endpoint' \
 await fetch("https://www.seaofthieves.com/api/endpoint", {
   method: "GET",
   headers: {
-    "Cookie": "rat=...; awfs=...",
+    Cookie: "rat=...; awfs=...",
     "User-Agent": "Mozilla/5.0",
-    "X-CSRF-Token": "..."
-  }
+    "X-CSRF-Token": "...",
+  },
 });
 ```
 
