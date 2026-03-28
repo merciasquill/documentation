@@ -4,9 +4,65 @@ description: "Basic slash commands available for all users"
 icon: "cube"
 ---
 
+## Credits
+
+This command can be used to view acknowledgments and credits for authors, contributors, and resources related to the bot.
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
+| <Badge color="gray">Group DMs</Badge> |
+<Badge color="gray">Guild Channels</Badge>
+
+```
+/credits ephemeral:True
+```
+
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
+## Invite
+
+This command can be used to retrieve the default bot invite link along with a link to the Discord support server.
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
+| <Badge color="gray">Group DMs</Badge> |
+<Badge color="gray">Guild Channels</Badge>
+
+```
+/invite ephemeral:True
+```
+
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
+## Legal
+
+This command can be used to view legal terms, policies, and other compliance-related information for the bot.
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
+| <Badge color="gray">Group DMs</Badge> |
+<Badge color="gray">Guild Channels</Badge>
+
+```
+/legal ephemeral:True
+```
+
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
 ## Ping
 
 This command can be used to test the bot's current service status and response latency for interactions and Discord's gateway connection.
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
+| <Badge color="gray">Group DMs</Badge> |
+<Badge color="gray">Guild Channels</Badge>
 
 ```
 /ping ephemeral:True
