@@ -2,7 +2,9 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
 
-  "name": "Mercia's Quill Documentation",
+  "name": "Mercia's Quill Documentation",  
+  "description": "Comprehensive guides and technical references covering setup, authentication, data access, and integration details",
+  
   "logo": {
     "light": "/public/logo/light.svg",
     "dark": "/public/logo/dark.svg"
@@ -123,5 +125,8 @@
   },
 
   "icons": { "library": "fontawesome" },
-  "styling": { "latex": true, "eyebrows": "breadcrumbs" }
+  "styling": {
+    "latex": true,
+    "eyebrows": "breadcrumbs"
+  }
 }
