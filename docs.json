@@ -92,7 +92,18 @@
       "instagram": "https://www.instagram.com/merciasquill",
       "github": "https://github.com/merciasquill/documentation",
       "x": "https://x.com/MerciasQuill"
-    }
+    },
+    "links": [
+      {
+        "header": "Footer 1",
+        "items": [
+          {
+            "label": "Label",
+            "href": "/link"
+          }
+        ]
+      }
+    ]
   },
   "icons": {
     "library": "fontawesome"
@@ -104,6 +115,13 @@
     "default": "system"
   },
   "background": {
-    "decoration": "grid"
+    "decoration": "windows"
+  },
+  "banner": {
+    "dismissible": false
+  },
+  "styling": {
+    "latex": true,
+    "eyebrows": "breadcrumbs"
   }
 }
