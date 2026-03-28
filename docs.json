@@ -79,10 +79,18 @@
   },
   "navbar": {
     "primary": {
-      "type": "button",
-      "label": "Contribute on GitHub",
+      "type": "github",
+      "label": "Contribute",
       "href": "https://github.com/merciasquill/documentation"
-    }
+    },
+
+    "links": [
+      {
+        "type": "button",
+        "label": "Support",
+        "href": "https://www.merciasquill.com/support"
+      }
+    ]
   },
   "footer": {
     "socials": {
