@@ -100,6 +100,19 @@
           {
             "label": "Label",
             "href": "/link"
+          },
+          {
+            "label": "Label 2",
+            "href": "https://example.com"
+          }
+        ]
+      },
+      {
+        "header": "Footer 2",
+        "items": [
+          {
+            "label": "Label 1",
+            "href": "/a"
           }
         ]
       }
@@ -112,7 +125,8 @@
     "indexing": "all"
   },
   "appearance": {
-    "default": "system"
+    "default": "system",
+    "strict": false
   },
   "background": {
     "decoration": "windows"
