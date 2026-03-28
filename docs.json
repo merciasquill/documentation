@@ -84,7 +84,15 @@
       "href": "https://github.com/merciasquill/documentation"
     }
   },
-
+  "footer": {
+    "socials": {
+      "discord": "https://discord.com/discovery/applications/1169623628304892045",
+      "bluesky": "https://bsky.app/profile/merciasquill.com",
+      "instagram": "https://www.instagram.com/merciasquill",
+      "github": "https://github.com/merciasquill/documentation",
+      "x": "https://x.com/MerciasQuill"
+    }
+  },
   "icons": {
     "library": "fontawesome"
   },
@@ -96,5 +104,9 @@
   },
   "background": {
     "decoration": "windows"
+  },
+  "styling": {
+    "latex": true,
+    "eyebrows": "breadcrumbs"
   }
 }
