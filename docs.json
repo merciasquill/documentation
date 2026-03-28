@@ -4,8 +4,8 @@
   "name": "Mercia's Quill Documentation",
   "colors": {
     "primary": "#dbc392",
-    "light": "#c89439",
-    "dark": "#dbc392"
+    "light": "#dbc392",
+    "dark": "#c89439"
   },
   "favicon": "/favicon.ico",
   "navigation": {
