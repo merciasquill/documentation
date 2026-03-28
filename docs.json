@@ -104,6 +104,6 @@
     "default": "system"
   },
   "background": {
-    "decoration": "grid"
+    "decoration": "windows"
   }
 }
