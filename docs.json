@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "luma",
   "name": "Mercia's Quill Documentation",
   "colors": {
     "primary": "#c89439",
@@ -78,12 +78,6 @@
     "dark": "/public/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Discord Support Server",
-        "href": "https://merciasquill.com/support"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "Contribute on GitHub",
