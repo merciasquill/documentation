@@ -99,7 +99,22 @@
       "x": "https://x.com/MerciasQuill",
       "bluesky": "https://bsky.app/profile/merciasquill.com",
       "instagram": "https://www.instagram.com/merciasquill"
-    }
+    },
+    "links": [
+      {
+        "header": "Legal Acknowledgements",
+        "items": [
+          {
+            "label": "Terms of Use",
+            "href": "/legal/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "/legal/privacy"
+          }
+        ]
+      }
+    ]
   },
   "icons": {
     "library": "fontawesome"
