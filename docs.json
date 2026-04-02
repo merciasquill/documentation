@@ -54,11 +54,14 @@
         ]
       },
       {
-        "tab": "Discord Bot Reference",
+        "tab": "Discord Bot",
         "groups": [
           {
             "group": "Available Commands",
-            "pages": ["tabs/discord-bot/available-commands/base-commands"]
+            "pages": [
+              "tabs/discord-bot/available-commands/base-commands",
+              "tabs/discord-bot/available-commands/fun-commands"
+            ]
           },
           {
             "group": "Configuration Options",

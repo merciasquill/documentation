@@ -1,0 +1,49 @@
+---
+title: "Fun Commands"
+description: "Fun slash commands available for all users that provide entertainment games"
+icon: "chess-rook"
+---
+
+## Cast Command
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 8hr</Badge>
+
+### Play Subcommand
+
+```
+/cast play ephemeral:False
+```
+
+> This command can be used to play a game a cast - a cute rng fishing game where you can catch random fishes.
+
+<Info>
+  The cooldown for this command can be reduced within the following methods (not
+  exclusive): - 2 hours for using `/cast play` in the [Hunter's
+  Calling](https://discord.gg/TbdFTcHdRB) server - 2 hours for using the `Fish`
+  server tag from the [Hunter's Calling](https://discord.gg/TbdFTcHdRB) server -
+  2 hours for server boosting the [Hunter's
+  Calling](https://discord.gg/TbdFTcHdRB) server
+</Info>
+
+<ParamField path="ephemeral" type="boolean" default={false}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
+### Rank Subcommand
+
+```
+/cast rank ephemeral:True
+```
+
+> This command can be used to view your global ranking for the cast command, given a specific timeframe.
+
+<ParamField path="timeframe" type="number" default={0} required>
+  Set the unix timestamp as the lower bound for the timeframe. (this will
+  autocomplete)
+</ParamField>
+
+<ParamField path="ephemeral" type="boolean" default={false}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>

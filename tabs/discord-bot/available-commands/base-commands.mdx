@@ -1,72 +1,74 @@
 ---
-title: "Basic Slash Commands"
-description: "Basic slash commands available for all users"
+title: "Base Commands"
+description: "Basic commands available for all users that provide basic information about the bot"
 icon: "cube"
 ---
 
-## Credits
-
-This command can be used to view acknowledgments and credits for authors, contributors, and resources related to the bot.
+## Credits Command
 
 <Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
-| <Badge color="gray">Group DMs</Badge> |
-<Badge color="gray">Guild Channels</Badge>
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
 
 ```
 /credits ephemeral:True
 ```
 
+> This command can be used to view acknowledgments and credits for authors, contributors, and resources related to the bot.
+
 <ParamField path="ephemeral" type="boolean" default={true}>
   Use this command as a hidden ephemeral message which can only be seen by you.
 </ParamField>
 
-## Invite
+---
 
-This command can be used to retrieve the default bot invite link along with a link to the Discord support server.
+## Invite Command
 
 <Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
-| <Badge color="gray">Group DMs</Badge> |
-<Badge color="gray">Guild Channels</Badge>
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
 
 ```
 /invite ephemeral:True
 ```
 
+> This command can be used to retrieve the default bot invite link along with a link to the Discord support server.
+
 <ParamField path="ephemeral" type="boolean" default={true}>
   Use this command as a hidden ephemeral message which can only be seen by you.
 </ParamField>
 
-## Legal
+---
 
-This command can be used to view legal terms, policies, and other compliance-related information for the bot.
+## Legal Command
 
 <Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
-| <Badge color="gray">Group DMs</Badge> |
-<Badge color="gray">Guild Channels</Badge>
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
 
 ```
 /legal ephemeral:True
 ```
 
+> This command can be used to view legal terms, policies, and other compliance-related information for the bot.
+
 <ParamField path="ephemeral" type="boolean" default={true}>
   Use this command as a hidden ephemeral message which can only be seen by you.
 </ParamField>
 
-## Ping
+---
 
-This command can be used to test the bot's current service status and response latency for interactions and Discord's gateway connection.
+## Ping Command
 
 <Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> | <Badge color="gray">Bot DMs</Badge>
-| <Badge color="gray">Group DMs</Badge> |
-<Badge color="gray">Guild Channels</Badge>
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
 
 ```
 /ping ephemeral:True
 ```
+
+> This command can be used to test the bot's current service status and response latency for interactions and Discord's gateway connection.
 
 <ParamField path="ephemeral" type="boolean" default={true}>
   Use this command as a hidden ephemeral message which can only be seen by you.
