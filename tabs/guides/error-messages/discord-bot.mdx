@@ -11,7 +11,7 @@ icon: "discord"
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-This is a client-side error caused when recently using the same command in a short timeframe. Please wait until the requested cooldown has ended before using this interaction again.
+This is a client-side error caused when recently using the same command in a short timeframe. Please try again later after the requested cooldown has ended.
 
 <Info>
   Repeatedly using the same command in a short timeframe will exponentially
@@ -36,6 +36,15 @@ This is a client-side error caused when a message does not receive a valid respo
 
 This is an internal service error caused when the Sea of Thieves API is unavailable or has returned an invalid response. This is generally caused by 3rd party maintenance or downtime outside of Mercia's Quill's control. If the error repeatedly persists, please [contact](https://merciasquill.com/support) a developer for further assistance.
 
+## Invalid Autocomplete Option
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when a command option with autocompletion enabled is overridden and an invalid value is manually provided. Please try again, but select an autocompleted choice.
+
 ## Missing Cast Progress
 
 <Badge color="yellow" icon="desktop">
@@ -43,7 +52,7 @@ This is an internal service error caused when the Sea of Thieves API is unavaila
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-This is a client-side error caused when no progress using the [cast play](/tabs/discord-bot/available-commands/fun-commands#play-subcommand) subcommand could be found for the given timeframe. Please use this subcommand and try again later.
+This is a client-side error caused when no progress using the [/cast play](/tabs/discord-bot/available-commands/fun-commands#play-subcommand) subcommand could be found for the given timeframe. Please try again later after using the `/cast play` subcommand.
 
 ## Missing Interaction Handler
 
