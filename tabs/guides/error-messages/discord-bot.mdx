@@ -25,7 +25,7 @@ This is a client-side error caused when recently using the same command in a sho
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-This is a client-side error caused when a message does not receive a valid response within the given timeframe. Please try again, but select an option quicker.
+This is a client-side error caused when a message does not receive a valid response within the given timeframe. Please select an option within the given timeframe and try again.
 
 ## Failed to Fetch Sea of Thieves
 
@@ -43,7 +43,7 @@ This is an internal service error caused when the Sea of Thieves API is unavaila
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-This is a client-side error caused when a command option with autocompletion enabled is overridden and an invalid value is manually provided. Please try again, but select an autocompleted choice.
+This is a client-side error caused when a command option with autocompletion enabled is overridden and an invalid value is manually provided. Please select an autocompleted choice and try again.
 
 ## Missing Cast Progress
 
@@ -52,7 +52,7 @@ This is a client-side error caused when a command option with autocompletion ena
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-This is a client-side error caused when no progress using the [/cast play](/tabs/discord-bot/available-commands/fun-commands#play-subcommand) subcommand could be found for the given timeframe. Please try again later after using the `/cast play` subcommand.
+This is a client-side error caused when no progress using the [/cast play](/tabs/discord-bot/available-commands/fun-commands#play-subcommand) subcommand could be found for the given timeframe. Please use the `/cast play` subcommand and try again.
 
 ## Missing Interaction Handler
 
@@ -70,7 +70,7 @@ This is an internal service error caused when the associated action or handler f
 </Badge>
 <Badge color="ghost">not logged</Badge>
 
-This is a client-side error caused when an action requires access to Xbox's internal API, but access access has not been granted via [oAuth2](https://auth.merciasquill.com/oauth2/handlers/xbox-live-verification/update-link). Please try again, but first add Mercia's Quill as an authorized application.
+This is a client-side error caused when an action requires access to Xbox's internal API, but access has not been granted via [oAuth2](https://auth.merciasquill.com/oauth2/handlers/xbox-live-verification/update-link). Please add Mercia's Quill as an authorized application and try again.
 
 ## Unexpected Server Error
 
@@ -80,3 +80,12 @@ This is a client-side error caused when an action requires access to Xbox's inte
 <Badge color="ghost">logged</Badge>
 
 This is an internal service error caused for unexpected reasons. If the error repeatedly persists, please [contact](https://merciasquill.com/support) a developer for further assistance.
+
+## Unknown User Connections
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when an action requires access to internal platforms APIs, but a target user has not granted access via oAuth2. Please request the target user to add Mercia's Quill as an authorized application and try again.
