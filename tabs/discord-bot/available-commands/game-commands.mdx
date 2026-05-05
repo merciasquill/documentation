@@ -1,0 +1,86 @@
+---
+title: "Game Commands"
+description: "Game slash commands available for all users that provide helpful Sea of Thieves related tools and tips"
+icon: "gamepad"
+---
+
+## Calendar Command
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
+
+```
+/calendar ephemeral:True
+```
+
+> This command can be used to view the current and past calendars created by [Taaamas](/legal/acknowledgements#monthly-events-calendar)
+
+<ParamField path="archive" type="string">
+  Select a specific previously archived calendar to view.
+</ParamField>
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
+## Support Command
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
+
+```
+/support ephemeral:True
+```
+
+> This command can be used to create a support ticket for Sea of Thieves or to search for a specific article on [support.seaofthieves.com](https://support.seaofthieves.com/).
+
+<ParamField path="request" type="string">
+  Select the type of support ticket to create.
+</ParamField>
+<ParamField path="request" type="string">
+  Perform a title search for existing support articles on
+  [support.seaofthieves.com](https://support.seaofthieves.com/).
+</ParamField>
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
+## Weather Command
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
+
+```
+/weather ephemeral:True
+```
+
+> This command can be used to get quick links for the current location of the storm in Sea of Thieves using [Geekya](https://geekya.com/games/sot/world#l=Storm) and [Rare Thief](https://maps.seaofthieves.rarethief.com/?path=storm-tracker).
+
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
+
+## Wiki Command
+
+<Badge color="yellow">User Install</Badge> |
+<Badge color="green">Guild Install</Badge> |
+<Badge color="red">Cooldown: 3s</Badge>
+
+```
+/wiki ephemeral:True
+```
+
+> This command can be used to search for all core pages from the [Sea of Thieves Wiki](https://seaofthieves.wiki.gg/).
+
+<ParamField path="search" type="string">
+  Perform a title search to match the given search term to page names.
+</ParamField>
+<ParamField path="search" type="string">
+  Perform a full text search to match occurrences of the given search term
+  across all pages.
+</ParamField>
+<ParamField path="ephemeral" type="boolean" default={true}>
+  Use this command as a hidden ephemeral message which can only be seen by you.
+</ParamField>
