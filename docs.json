@@ -66,6 +66,13 @@
           {
             "group": "Configuration Options",
             "pages": ["tabs/discord-bot/config-data/gamertag-nicknames"]
+          },
+          {
+            "group": "Error Messages",
+            "pages": [
+              "tabs/discord-bot/error-messages/client-errors",
+              "tabs/discord-bot/error-messages/server-errors"
+            ]
           }
         ]
       }

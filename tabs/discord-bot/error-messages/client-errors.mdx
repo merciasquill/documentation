@@ -1,0 +1,82 @@
+---
+title: "Client-Side Errors"
+description: "Possible error messages shown caused by client-side interaction errors"
+icon: "desktop"
+---
+
+## Active Command Cooldown
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when recently using the same command in a short timeframe. Please try again later after the requested cooldown has ended.
+
+<Info>
+  Repeatedly using the same command in a short timeframe will exponentially
+  increase rate limits.
+</Info>
+
+## Collector Timeout
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when a message does not receive a valid response within the given timeframe. Please select an option within the given timeframe and try again.
+
+## Invalid Autocomplete Option
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when a command option with autocompletion enabled is overridden and an invalid value is manually provided. Please select an autocompleted choice and try again.
+
+## Invalid Profile File Attachment
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when an attachment was provided that does not meet Discord's requirements for a valid profile picture or banner. Please attach a file that meets the following prerequisites and try again: Type: png, gif, jpg, or webp; Size: 10 Megabytes or less.
+
+## Missing Cast Progress
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when no progress using the [/cast play](/tabs/discord-bot/available-commands/fun-commands#play-subcommand) subcommand could be found for the given timeframe. Please use the `/cast play` subcommand and try again.
+
+## Missing Xbox Connection
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when an action requires access to Xbox's internal API, but access has not been granted via [oAuth2](https://auth.merciasquill.com/oauth2/handlers/xbox-live-verification/update-link). Please add Mercia's Quill as an authorized application and try again.
+
+## Unknown User Connections
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when an action requires access to internal platforms APIs, but a target user has not granted access via oAuth2. Please request the target user to add Mercia's Quill as an authorized application and try again.
+
+## Unknown Wiki Page
+
+<Badge color="yellow" icon="desktop">
+  client-side
+</Badge>
+<Badge color="ghost">not logged</Badge>
+
+This is a client-side error caused when a queried wiki page could not be found on [seaofthieves.wiki.gg](https://seaofthieves.wiki.gg/). Please try again with a valid page name.
