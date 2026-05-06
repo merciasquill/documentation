@@ -28,11 +28,7 @@
               "tabs/guides/sea-of-thieves-api/authentication",
               "tabs/guides/sea-of-thieves-api/extension"
             ]
-          },
-          {
-            "group": "Error Messages",
-            "pages": ["tabs/guides/error-messages/discord-bot"]
-          }
+          } 
         ]
       },
       {
@@ -60,7 +56,9 @@
             "group": "Available Commands",
             "pages": [
               "tabs/discord-bot/available-commands/base-commands",
-              "tabs/discord-bot/available-commands/fun-commands"
+              "tabs/discord-bot/available-commands/fun-commands",
+              "tabs/discord-bot/available-commands/game-commands",
+              "tabs/discord-bot/available-commands/utility-commands"
             ]
           },
           {
