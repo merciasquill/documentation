@@ -28,7 +28,14 @@
               "tabs/guides/sea-of-thieves-api/authentication",
               "tabs/guides/sea-of-thieves-api/extension"
             ]
-          } 
+          },
+          {
+            "group": "Verification Systems",
+            "pages": [
+              "tabs/guides/verification-systems/connections-gate",
+              "tabs/guides/verification-systems/linked-roles"
+            ]
+          }
         ]
       },
       {
