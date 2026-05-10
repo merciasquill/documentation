@@ -1,86 +1,83 @@
 ---
-title: "Game Commands"
-description: "Game slash commands available for all users that provide helpful Sea of Thieves related tools and tips"
-icon: "gamepad"
+title: "Utility Commands"
+description: "Slash commands available primarily for server administrators that provide utility and configuration modules"
+icon: "gear"
 ---
 
-## Calendar Command
+## Setup Command
 
-<Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> |
-<Badge color="red">Cooldown: 3s</Badge>
+### Features Subcommand Group
 
-```
-/calendar ephemeral:True
-```
+#### Custom Profile Subcommand
 
-> This command can be used to view the current and past calendars created by [Taaamas](/legal/acknowledgements#monthly-events-calendar)
-
-<ParamField path="archive" type="string">
-  Select a specific previously archived calendar to view.
-</ParamField>
-<ParamField path="ephemeral" type="boolean" default={true}>
-  Use this command as a hidden ephemeral message which can only be seen by you.
-</ParamField>
-
-## Support Command
-
-<Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> |
-<Badge color="red">Cooldown: 3s</Badge>
-
-```
-/support ephemeral:True
-```
-
-> This command can be used to create a support ticket for Sea of Thieves or to search for a specific article on [support.seaofthieves.com](https://support.seaofthieves.com/).
-
-<ParamField path="request" type="string">
-  Select the type of support ticket to create.
-</ParamField>
-<ParamField path="request" type="string">
-  Perform a title search for existing support articles on
-  [support.seaofthieves.com](https://support.seaofthieves.com/).
-</ParamField>
-<ParamField path="ephemeral" type="boolean" default={true}>
-  Use this command as a hidden ephemeral message which can only be seen by you.
-</ParamField>
-
-## Weather Command
-
-<Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> |
-<Badge color="red">Cooldown: 3s</Badge>
+<>
+  <Badge color="purple" icon="star">
+    Tier 2 Premium
+  </Badge>
+  {" - "}
+  <Badge color="green" icon="server">
+    Guild Install
+  </Badge>
+  {" - "}
+  <Badge color="yellow" icon="clock">
+    Cooldown: 30m
+  </Badge>
+  {" - "}
+  <Badge color="red" icon="lock">
+    Required Permissions: Manage Server
+  </Badge>
+</>
 
 ```
-/weather ephemeral:True
+/setup feature custom_profile
 ```
 
-> This command can be used to get quick links for the current location of the storm in Sea of Thieves using [Geekya](https://geekya.com/games/sot/world#l=Storm) and [Rare Thief](https://maps.seaofthieves.rarethief.com/?path=storm-tracker).
+> This command can be used to configure a custom server-specific profile picture, name, description, and banner for Mercia's Quill.
 
-<ParamField path="ephemeral" type="boolean" default={true}>
-  Use this command as a hidden ephemeral message which can only be seen by you.
-</ParamField>
+Please note that this change will be visible to _all members_ in the server. Misuse by using inappropriate content may result in a permanent restriction of this feature by the server.
 
-## Wiki Command
+#### Wiki.gg Domain Lock Subcommand
 
-<Badge color="yellow">User Install</Badge> |
-<Badge color="green">Guild Install</Badge> |
-<Badge color="red">Cooldown: 3s</Badge>
+<>
+  <Badge color="green" icon="server">
+    Guild Install
+  </Badge>
+  {" - "}
+  <Badge color="yellow" icon="clock">
+    Cooldown: 10s
+  </Badge>
+  {" - "}
+  <Badge color="red" icon="lock">
+    Required Permissions: Manage Server
+  </Badge>
+</>
 
 ```
-/wiki ephemeral:True
+/setup feature wikigg_lock
 ```
 
-> This command can be used to search for all core pages from the [Sea of Thieves Wiki](https://seaofthieves.wiki.gg/).
+> This command can be used to configure a message rule which automatically redirect all deprecated [seaofthieves.fandom.com](https://seaofthieves.fandom.com) links to [seaofthieves.wiki.gg](https://seaofthieves.wiki.gg).
 
-<ParamField path="search" type="string">
-  Perform a title search to match the given search term to page names.
-</ParamField>
-<ParamField path="search" type="string">
-  Perform a full text search to match occurrences of the given search term
-  across all pages.
-</ParamField>
-<ParamField path="ephemeral" type="boolean" default={true}>
-  Use this command as a hidden ephemeral message which can only be seen by you.
-</ParamField>
+### Moderation Subcommand Group
+
+#### Alternate Account Gate Subcommand
+
+<>
+  <Badge color="green" icon="server">
+    Guild Install
+  </Badge>
+  {" - "}
+  <Badge color="yellow" icon="clock">
+    Cooldown: 10s
+  </Badge>
+  {" - "}
+  <Badge color="red" icon="lock">
+    Required Permissions: Manage Server
+  </Badge>
+</>
+
+```
+/setup moderation alt_account_gate
+```
+
+> This command can be used to configure a user moderation rule which prevents users from joining servers using alternate accounts. This feature relies on a [verification system](/tabs/guides/verification-systems/overview) to be in place.
