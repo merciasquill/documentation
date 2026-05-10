@@ -23,6 +23,13 @@
         "tab": "Guides",
         "groups": [
           {
+            "group": "Verification Systems",
+            "pages": [
+              "tabs/guides/verification-systems/connections-gate",
+              "tabs/guides/verification-systems/linked-roles"
+            ]
+          },
+          {
             "group": "Sea of Thieves API",
             "pages": [
               "tabs/guides/sea-of-thieves-api/authentication",
@@ -30,11 +37,8 @@
             ]
           },
           {
-            "group": "Verification Systems",
-            "pages": [
-              "tabs/guides/verification-systems/connections-gate",
-              "tabs/guides/verification-systems/linked-roles"
-            ]
+            "group": "Premium Features",
+            "pages": ["tabs/guides/premium-features/json-editor"]
           }
         ]
       },
@@ -70,7 +74,7 @@
           },
           {
             "group": "Configuration Options",
-            "pages": ["tabs/discord-bot/config-data/gamertag-nicknames"]
+            "pages": ["tabs/discord-bot/config-options/xbox-profile-data"]
           },
           {
             "group": "Error Messages",
