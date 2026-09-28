@@ -80,7 +80,8 @@
             "group": "Error Messages",
             "pages": [
               "tabs/discord-bot/error-messages/client-errors",
-              "tabs/discord-bot/error-messages/server-errors"
+              "tabs/discord-bot/error-messages/server-errors",
+              "tabs/discord-bot/error-messages/red-guard-enforcement"
             ]
           }
         ]
