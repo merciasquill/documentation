@@ -50,12 +50,14 @@
             "pages": ["tabs/api-reference/introduction"]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Discord",
             "pages": [
-              "tabs/api-reference/endpoint/get",
-              "tabs/api-reference/endpoint/create",
-              "tabs/api-reference/endpoint/delete",
-              "tabs/api-reference/endpoint/put"
+              "tabs/api-reference/discord/authentication/access-token/public",
+              "tabs/api-reference/discord/authentication/me/public",
+              "tabs/api-reference/discord/authentication/update-linked-role/public",
+              "tabs/api-reference/discord/user/connections/public",
+              "tabs/api-reference/discord/user/guilds/public",
+              "tabs/api-reference/discord/user/member/public"
             ]
           }
         ]

@@ -1,0 +1,2787 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "discord",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/discord/authentication/access-token/admin": {
+      "post": {
+        "summary": "admin",
+        "description": "",
+        "tags": ["discord_authentication_access-token"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token_type": {
+                      "type": "string"
+                    },
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "refresh_token": {
+                      "type": "string"
+                    },
+                    "expires_in": {
+                      "type": "integer"
+                    },
+                    "scopes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "refresh_token": "******************************",
+                      "expires_in": 604800,
+                      "scopes": ["identify"]
+                    },
+                    "summary": "example"
+                  },
+                  "example_raw": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "expires_in": 604800,
+                      "refresh_token": "******************************",
+                      "scope": "identify"
+                    },
+                    "summary": "example_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/admin"
+        }
+      }
+    },
+    "/discord/authentication/access-token": {
+      "post": {
+        "summary": "public",
+        "description": "",
+        "tags": ["discord_authentication_access-token"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token_type": {
+                      "type": "string"
+                    },
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "refresh_token": {
+                      "type": "string"
+                    },
+                    "expires_in": {
+                      "type": "integer"
+                    },
+                    "scopes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "refresh_token": "******************************",
+                      "expires_in": 604800,
+                      "scopes": ["identify"]
+                    },
+                    "summary": "example"
+                  },
+                  "example_raw": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "expires_in": 604800,
+                      "refresh_token": "******************************",
+                      "scope": "identify"
+                    },
+                    "summary": "example_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/public"
+        }
+      }
+    },
+    "/discord/authentication/access-token/:user_id": {
+      "post": {
+        "summary": "user",
+        "description": "",
+        "tags": ["discord_authentication_access-token"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token_type": {
+                      "type": "string"
+                    },
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "refresh_token": {
+                      "type": "string"
+                    },
+                    "expires_in": {
+                      "type": "integer"
+                    },
+                    "scopes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "refresh_token": "******************************",
+                      "expires_in": 604800,
+                      "scopes": ["identify"]
+                    },
+                    "summary": "example"
+                  },
+                  "example_raw": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "expires_in": 604800,
+                      "refresh_token": "******************************",
+                      "scope": "identify"
+                    },
+                    "summary": "example_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id_path}}"
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/user"
+        }
+      }
+    },
+    "/discord/authentication/code/admin": {
+      "post": {
+        "summary": "admin",
+        "description": "",
+        "tags": ["discord_authentication_code"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token_type": {
+                      "type": "string"
+                    },
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "refresh_token": {
+                      "type": "string"
+                    },
+                    "expires_in": {
+                      "type": "integer"
+                    },
+                    "scopes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "refresh_token": "******************************",
+                      "expires_in": 604800,
+                      "scopes": ["identify"]
+                    },
+                    "summary": "example"
+                  },
+                  "example_raw": {
+                    "value": {
+                      "token_type": "Bearer",
+                      "access_token": "*********************************************************",
+                      "expires_in": 604800,
+                      "refresh_token": "******************************",
+                      "scope": "identify"
+                    },
+                    "summary": "example_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/admin_1"
+        }
+      }
+    },
+    "/discord/authentication/me/admin": {
+      "get": {
+        "summary": "admin",
+        "description": "",
+        "tags": ["discord_authentication_me"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "avatarUrl": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "displayName": "Mercia's Quill",
+                      "avatarUrl": "https://cdn.discordapp.com/avatars/1248045928124907541/cf2966973a8749d8cff395b483c8e039.png?size=4096"
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "avatar": "cf2966973a8749d8cff395b483c8e039",
+                      "discriminator": "0",
+                      "public_flags": 0,
+                      "flags": 0,
+                      "banner": null,
+                      "accent_color": 1052180,
+                      "global_name": "Mercia's Quill",
+                      "avatar_decoration_data": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "banner_color": "#100e14",
+                      "clan": null,
+                      "primary_guild": null,
+                      "mfa_enabled": true,
+                      "locale": "en-GB",
+                      "premium_type": 0
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/discord/authentication/me": {
+      "get": {
+        "summary": "public",
+        "description": "",
+        "tags": ["discord_authentication_me"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "avatarUrl": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "displayName": "Mercia's Quill",
+                      "avatarUrl": "https://cdn.discordapp.com/avatars/1248045928124907541/cf2966973a8749d8cff395b483c8e039.png?size=4096"
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "avatar": "cf2966973a8749d8cff395b483c8e039",
+                      "discriminator": "0",
+                      "public_flags": 0,
+                      "flags": 0,
+                      "banner": null,
+                      "accent_color": 1052180,
+                      "global_name": "Mercia's Quill",
+                      "avatar_decoration_data": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "banner_color": "#100e14",
+                      "clan": null,
+                      "primary_guild": null,
+                      "mfa_enabled": true,
+                      "locale": "en-GB",
+                      "premium_type": 0
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/discord/authentication/me/:user_id": {
+      "get": {
+        "summary": "user",
+        "description": "",
+        "tags": ["discord_authentication_me"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "avatarUrl": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "displayName": "Mercia's Quill",
+                      "avatarUrl": "https://cdn.discordapp.com/avatars/1248045928124907541/cf2966973a8749d8cff395b483c8e039.png?size=4096"
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "avatar": "cf2966973a8749d8cff395b483c8e039",
+                      "discriminator": "0",
+                      "public_flags": 0,
+                      "flags": 0,
+                      "banner": null,
+                      "accent_color": 1052180,
+                      "global_name": "Mercia's Quill",
+                      "avatar_decoration_data": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "banner_color": "#100e14",
+                      "clan": null,
+                      "primary_guild": null,
+                      "mfa_enabled": true,
+                      "locale": "en-GB",
+                      "premium_type": 0
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id_path}}"
+          }
+        ]
+      }
+    },
+    "/discord/authentication/update-linked-role": {
+      "post": {
+        "summary": "public",
+        "description": "",
+        "tags": ["discord_authentication_update-linked-role"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform_name": {
+                      "type": "string"
+                    },
+                    "platform_username": {
+                      "type": "string"
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "properties": {
+                        "pirate_legend": {
+                          "type": "string"
+                        },
+                        "legendary_hunter": {
+                          "type": "string"
+                        },
+                        "guardian_of_the_sea": {
+                          "type": "string"
+                        },
+                        "warrior_of_the_flame": {
+                          "type": "string"
+                        },
+                        "time_played": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "platform_name": "MerciasQuill#450",
+                      "platform_username": "Hunter of The Shrouded Ghost",
+                      "metadata": {
+                        "pirate_legend": "0",
+                        "legendary_hunter": "0",
+                        "guardian_of_the_sea": "0",
+                        "warrior_of_the_flame": "0",
+                        "time_played": "49"
+                      }
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "platform_name": "MerciasQuill#450",
+                      "platform_username": "Hunter of The Shrouded Ghost",
+                      "metadata": {
+                        "pirate_legend": "0",
+                        "legendary_hunter": "0",
+                        "guardian_of_the_sea": "0",
+                        "warrior_of_the_flame": "0",
+                        "time_played": "49"
+                      }
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/public_1"
+        }
+      }
+    },
+    "/discord/authentication/update-linked-role/:user_id": {
+      "post": {
+        "summary": "user",
+        "description": "",
+        "tags": ["discord_authentication_update-linked-role"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform_name": {
+                      "type": "string"
+                    },
+                    "platform_username": {
+                      "type": "string"
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "properties": {
+                        "pirate_legend": {
+                          "type": "string"
+                        },
+                        "legendary_hunter": {
+                          "type": "string"
+                        },
+                        "guardian_of_the_sea": {
+                          "type": "string"
+                        },
+                        "warrior_of_the_flame": {
+                          "type": "string"
+                        },
+                        "time_played": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "platform_name": "MerciasQuill#450",
+                      "platform_username": "Hunter of The Shrouded Ghost",
+                      "metadata": {
+                        "pirate_legend": "0",
+                        "legendary_hunter": "0",
+                        "guardian_of_the_sea": "0",
+                        "warrior_of_the_flame": "0",
+                        "time_played": "49"
+                      }
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "platform_name": "MerciasQuill#450",
+                      "platform_username": "Hunter of The Shrouded Ghost",
+                      "metadata": {
+                        "pirate_legend": "0",
+                        "legendary_hunter": "0",
+                        "guardian_of_the_sea": "0",
+                        "warrior_of_the_flame": "0",
+                        "time_played": "49"
+                      }
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id_path}}"
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/user_1"
+        }
+      }
+    },
+    "/discord/user/connections": {
+      "get": {
+        "summary": "public",
+        "description": "",
+        "tags": ["discord_user_connections"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "friend_sync": {
+                        "type": "boolean"
+                      },
+                      "metadata_visibility": {
+                        "type": "integer"
+                      },
+                      "show_activity": {
+                        "type": "boolean"
+                      },
+                      "two_way_link": {
+                        "type": "boolean"
+                      },
+                      "verified": {
+                        "type": "boolean"
+                      },
+                      "visibility": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": [
+                      {
+                        "id": "merciasquill.com",
+                        "name": "merciasquill.com",
+                        "type": "domain",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1091371178",
+                        "name": "merciasquill",
+                        "type": "twitch",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1424201376159178754",
+                        "name": "MerciasQuill",
+                        "type": "twitter",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "3066457469317231",
+                        "name": "MerciasQuill450",
+                        "type": "xbox",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": true,
+                        "verified": true,
+                        "visibility": 1
+                      }
+                    ],
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": [
+                      {
+                        "id": "merciasquill.com",
+                        "name": "merciasquill.com",
+                        "type": "domain",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1091371178",
+                        "name": "merciasquill",
+                        "type": "twitch",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1424201376159178754",
+                        "name": "MerciasQuill",
+                        "type": "twitter",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "3066457469317231",
+                        "name": "MerciasQuill450",
+                        "type": "xbox",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": true,
+                        "verified": true,
+                        "visibility": 1
+                      }
+                    ],
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10s"
+          }
+        ]
+      }
+    },
+    "/discord/user/connections/:user_id": {
+      "get": {
+        "summary": "user",
+        "description": "",
+        "tags": ["discord_user_connections"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "friend_sync": {
+                        "type": "boolean"
+                      },
+                      "metadata_visibility": {
+                        "type": "integer"
+                      },
+                      "show_activity": {
+                        "type": "boolean"
+                      },
+                      "two_way_link": {
+                        "type": "boolean"
+                      },
+                      "verified": {
+                        "type": "boolean"
+                      },
+                      "visibility": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": [
+                      {
+                        "id": "merciasquill.com",
+                        "name": "merciasquill.com",
+                        "type": "domain",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1091371178",
+                        "name": "merciasquill",
+                        "type": "twitch",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1424201376159178754",
+                        "name": "MerciasQuill",
+                        "type": "twitter",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "3066457469317231",
+                        "name": "MerciasQuill450",
+                        "type": "xbox",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": true,
+                        "verified": true,
+                        "visibility": 1
+                      }
+                    ],
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": [
+                      {
+                        "id": "merciasquill.com",
+                        "name": "merciasquill.com",
+                        "type": "domain",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1091371178",
+                        "name": "merciasquill",
+                        "type": "twitch",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "1424201376159178754",
+                        "name": "MerciasQuill",
+                        "type": "twitter",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": false,
+                        "verified": true,
+                        "visibility": 1
+                      },
+                      {
+                        "id": "3066457469317231",
+                        "name": "MerciasQuill450",
+                        "type": "xbox",
+                        "friend_sync": false,
+                        "metadata_visibility": 1,
+                        "show_activity": true,
+                        "two_way_link": true,
+                        "verified": true,
+                        "visibility": 1
+                      }
+                    ],
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10s"
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id_path}}"
+          }
+        ]
+      }
+    },
+    "/discord/user/guilds": {
+      "get": {
+        "summary": "public",
+        "description": "",
+        "tags": ["discord_user_guilds"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "icon": {
+                        "type": "string"
+                      },
+                      "banner": {
+                        "type": "string",
+                        "nullable": true
+                      },
+                      "owner": {
+                        "type": "boolean"
+                      },
+                      "permissions": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": [
+                      {
+                        "id": "1107136103636537424",
+                        "name": "Mercia’s Quill",
+                        "icon": "510322da49d794ae54ecacee4c89e06f",
+                        "banner": null,
+                        "owner": false,
+                        "permissions": "2151613363244609",
+                        "features": [
+                          "MEMBER_VERIFICATION_GATE_ENABLED",
+                          "ROLE_SUBSCRIPTIONS_ENABLED",
+                          "CREATOR_ACCEPTED_NEW_TERMS",
+                          "COMMUNITY",
+                          "CHANNEL_ICON_EMOJIS_GENERATED",
+                          "AUTO_MODERATION",
+                          "GUILD_SERVER_GUIDE",
+                          "NEWS",
+                          "CREATOR_MONETIZABLE_PROVISIONAL",
+                          "PREVIEW_ENABLED",
+                          "SOUNDBOARD",
+                          "CREATOR_STORE_PAGE",
+                          "GUILD_ONBOARDING",
+                          "GUILD_ONBOARDING_HAS_PROMPTS",
+                          "GUILD_ONBOARDING_EVER_ENABLED"
+                        ]
+                      }
+                    ],
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": [
+                      {
+                        "id": "1107136103636537424",
+                        "name": "Mercia’s Quill",
+                        "icon": "510322da49d794ae54ecacee4c89e06f",
+                        "banner": null,
+                        "owner": false,
+                        "permissions": "2151613363244609",
+                        "features": [
+                          "GUILD_ONBOARDING_HAS_PROMPTS",
+                          "SOUNDBOARD",
+                          "CREATOR_MONETIZABLE_PROVISIONAL",
+                          "CREATOR_STORE_PAGE",
+                          "CHANNEL_ICON_EMOJIS_GENERATED",
+                          "MEMBER_VERIFICATION_GATE_ENABLED",
+                          "GUILD_SERVER_GUIDE",
+                          "GUILD_ONBOARDING",
+                          "GUILD_ONBOARDING_EVER_ENABLED",
+                          "PREVIEW_ENABLED",
+                          "COMMUNITY",
+                          "ROLE_SUBSCRIPTIONS_ENABLED",
+                          "CREATOR_ACCEPTED_NEW_TERMS",
+                          "AUTO_MODERATION",
+                          "NEWS"
+                        ]
+                      }
+                    ],
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10s"
+          }
+        ]
+      }
+    },
+    "/discord/user/guilds/:user_id": {
+      "get": {
+        "summary": "user",
+        "description": "",
+        "tags": ["discord_user_guilds"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "icon": {
+                        "type": "string"
+                      },
+                      "banner": {
+                        "type": "string",
+                        "nullable": true
+                      },
+                      "owner": {
+                        "type": "boolean"
+                      },
+                      "permissions": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": [
+                      {
+                        "id": "1107136103636537424",
+                        "name": "Mercia’s Quill",
+                        "icon": "510322da49d794ae54ecacee4c89e06f",
+                        "banner": null,
+                        "owner": false,
+                        "permissions": "2151613363244609",
+                        "features": [
+                          "MEMBER_VERIFICATION_GATE_ENABLED",
+                          "ROLE_SUBSCRIPTIONS_ENABLED",
+                          "CREATOR_ACCEPTED_NEW_TERMS",
+                          "COMMUNITY",
+                          "CHANNEL_ICON_EMOJIS_GENERATED",
+                          "AUTO_MODERATION",
+                          "GUILD_SERVER_GUIDE",
+                          "NEWS",
+                          "CREATOR_MONETIZABLE_PROVISIONAL",
+                          "PREVIEW_ENABLED",
+                          "SOUNDBOARD",
+                          "CREATOR_STORE_PAGE",
+                          "GUILD_ONBOARDING",
+                          "GUILD_ONBOARDING_HAS_PROMPTS",
+                          "GUILD_ONBOARDING_EVER_ENABLED"
+                        ]
+                      }
+                    ],
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": [
+                      {
+                        "id": "1107136103636537424",
+                        "name": "Mercia’s Quill",
+                        "icon": "510322da49d794ae54ecacee4c89e06f",
+                        "banner": null,
+                        "owner": false,
+                        "permissions": "2151613363244609",
+                        "features": [
+                          "GUILD_ONBOARDING_HAS_PROMPTS",
+                          "SOUNDBOARD",
+                          "CREATOR_MONETIZABLE_PROVISIONAL",
+                          "CREATOR_STORE_PAGE",
+                          "CHANNEL_ICON_EMOJIS_GENERATED",
+                          "MEMBER_VERIFICATION_GATE_ENABLED",
+                          "GUILD_SERVER_GUIDE",
+                          "GUILD_ONBOARDING",
+                          "GUILD_ONBOARDING_EVER_ENABLED",
+                          "PREVIEW_ENABLED",
+                          "COMMUNITY",
+                          "ROLE_SUBSCRIPTIONS_ENABLED",
+                          "CREATOR_ACCEPTED_NEW_TERMS",
+                          "AUTO_MODERATION",
+                          "NEWS"
+                        ]
+                      }
+                    ],
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10s"
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id_path}}"
+          }
+        ]
+      }
+    },
+    "/discord/user/member?guild_id={{target_guild_id}}": {
+      "get": {
+        "summary": "public",
+        "description": "",
+        "tags": ["discord_user_member"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "avatar": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "banner": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "communication_disabled_until": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "flags": {
+                      "type": "integer"
+                    },
+                    "joined_at": {
+                      "type": "string"
+                    },
+                    "nick": {
+                      "type": "string"
+                    },
+                    "pending": {
+                      "type": "boolean"
+                    },
+                    "premium_since": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "roles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "unusual_dm_activity_until": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "collectibles": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "display_name_styles": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "member_gaming_leaderboard_data": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "avatar": {
+                          "type": "string"
+                        },
+                        "discriminator": {
+                          "type": "string"
+                        },
+                        "public_flags": {
+                          "type": "integer"
+                        },
+                        "flags": {
+                          "type": "integer"
+                        },
+                        "banner": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "accent_color": {
+                          "type": "integer"
+                        },
+                        "global_name": {
+                          "type": "string"
+                        },
+                        "avatar_decoration_data": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "collectibles": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "display_name_styles": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "banner_color": {
+                          "type": "string"
+                        },
+                        "clan": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "primary_guild": {
+                          "type": "string",
+                          "nullable": true
+                        }
+                      }
+                    },
+                    "mute": {
+                      "type": "boolean"
+                    },
+                    "deaf": {
+                      "type": "boolean"
+                    },
+                    "bio": {
+                      "type": "string"
+                    },
+                    "permissions": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "avatar": null,
+                      "banner": null,
+                      "communication_disabled_until": null,
+                      "flags": 42,
+                      "joined_at": "2024-06-06T06:10:52.098000+00:00",
+                      "nick": "MerciasQuill#450",
+                      "pending": false,
+                      "premium_since": null,
+                      "roles": [
+                        "1228610102018183168",
+                        "1196326755145891941",
+                        "1172925751956349069",
+                        "1382997739209625691",
+                        "1170040754870169661"
+                      ],
+                      "unusual_dm_activity_until": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "member_gaming_leaderboard_data": null,
+                      "user": {
+                        "id": "1248045928124907541",
+                        "username": "merciasquill",
+                        "avatar": "cf2966973a8749d8cff395b483c8e039",
+                        "discriminator": "0",
+                        "public_flags": 0,
+                        "flags": 0,
+                        "banner": null,
+                        "accent_color": 1052180,
+                        "global_name": "Mercia's Quill",
+                        "avatar_decoration_data": null,
+                        "collectibles": null,
+                        "display_name_styles": null,
+                        "banner_color": "#100e14",
+                        "clan": null,
+                        "primary_guild": null
+                      },
+                      "mute": false,
+                      "deaf": false,
+                      "bio": "",
+                      "permissions": "2151613363244609"
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "avatar": null,
+                      "banner": null,
+                      "communication_disabled_until": null,
+                      "flags": 42,
+                      "joined_at": "2024-06-06T06:10:52.098000+00:00",
+                      "nick": "MerciasQuill#450",
+                      "pending": false,
+                      "premium_since": null,
+                      "roles": [
+                        "1228610102018183168",
+                        "1196326755145891941",
+                        "1172925751956349069",
+                        "1382997739209625691",
+                        "1170040754870169661"
+                      ],
+                      "unusual_dm_activity_until": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "member_gaming_leaderboard_data": null,
+                      "user": {
+                        "id": "1248045928124907541",
+                        "username": "merciasquill",
+                        "avatar": "cf2966973a8749d8cff395b483c8e039",
+                        "discriminator": "0",
+                        "public_flags": 0,
+                        "flags": 0,
+                        "banner": null,
+                        "accent_color": 1052180,
+                        "global_name": "Mercia's Quill",
+                        "avatar_decoration_data": null,
+                        "collectibles": null,
+                        "display_name_styles": null,
+                        "banner_color": "#100e14",
+                        "clan": null,
+                        "primary_guild": null
+                      },
+                      "mute": false,
+                      "deaf": false,
+                      "bio": "",
+                      "permissions": "2151613363244609"
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10s"
+          },
+          {
+            "name": "guild_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{target_guild_id}}"
+          }
+        ]
+      }
+    },
+    "/discord/user/member/:user_id?guild_id={{target_guild_id}}": {
+      "get": {
+        "summary": "user",
+        "description": "",
+        "tags": ["discord_user_member"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "avatar": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "banner": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "communication_disabled_until": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "flags": {
+                      "type": "integer"
+                    },
+                    "joined_at": {
+                      "type": "string"
+                    },
+                    "nick": {
+                      "type": "string"
+                    },
+                    "pending": {
+                      "type": "boolean"
+                    },
+                    "premium_since": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "roles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "unusual_dm_activity_until": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "collectibles": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "display_name_styles": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "member_gaming_leaderboard_data": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "avatar": {
+                          "type": "string"
+                        },
+                        "discriminator": {
+                          "type": "string"
+                        },
+                        "public_flags": {
+                          "type": "integer"
+                        },
+                        "flags": {
+                          "type": "integer"
+                        },
+                        "banner": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "accent_color": {
+                          "type": "integer"
+                        },
+                        "global_name": {
+                          "type": "string"
+                        },
+                        "avatar_decoration_data": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "collectibles": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "display_name_styles": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "banner_color": {
+                          "type": "string"
+                        },
+                        "clan": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "primary_guild": {
+                          "type": "string",
+                          "nullable": true
+                        }
+                      }
+                    },
+                    "mute": {
+                      "type": "boolean"
+                    },
+                    "deaf": {
+                      "type": "boolean"
+                    },
+                    "bio": {
+                      "type": "string"
+                    },
+                    "permissions": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "avatar": null,
+                      "banner": null,
+                      "communication_disabled_until": null,
+                      "flags": 42,
+                      "joined_at": "2024-06-06T06:10:52.098000+00:00",
+                      "nick": "MerciasQuill#450",
+                      "pending": false,
+                      "premium_since": null,
+                      "roles": [
+                        "1228610102018183168",
+                        "1196326755145891941",
+                        "1172925751956349069",
+                        "1382997739209625691",
+                        "1170040754870169661"
+                      ],
+                      "unusual_dm_activity_until": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "member_gaming_leaderboard_data": null,
+                      "user": {
+                        "id": "1248045928124907541",
+                        "username": "merciasquill",
+                        "avatar": "cf2966973a8749d8cff395b483c8e039",
+                        "discriminator": "0",
+                        "public_flags": 0,
+                        "flags": 0,
+                        "banner": null,
+                        "accent_color": 1052180,
+                        "global_name": "Mercia's Quill",
+                        "avatar_decoration_data": null,
+                        "collectibles": null,
+                        "display_name_styles": null,
+                        "banner_color": "#100e14",
+                        "clan": null,
+                        "primary_guild": null
+                      },
+                      "mute": false,
+                      "deaf": false,
+                      "bio": "",
+                      "permissions": "2151613363244609"
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "avatar": null,
+                      "banner": null,
+                      "communication_disabled_until": null,
+                      "flags": 42,
+                      "joined_at": "2024-06-06T06:10:52.098000+00:00",
+                      "nick": "MerciasQuill#450",
+                      "pending": false,
+                      "premium_since": null,
+                      "roles": [
+                        "1228610102018183168",
+                        "1196326755145891941",
+                        "1172925751956349069",
+                        "1382997739209625691",
+                        "1170040754870169661"
+                      ],
+                      "unusual_dm_activity_until": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "member_gaming_leaderboard_data": null,
+                      "user": {
+                        "id": "1248045928124907541",
+                        "username": "merciasquill",
+                        "avatar": "cf2966973a8749d8cff395b483c8e039",
+                        "discriminator": "0",
+                        "public_flags": 0,
+                        "flags": 0,
+                        "banner": null,
+                        "accent_color": 1052180,
+                        "global_name": "Mercia's Quill",
+                        "avatar_decoration_data": null,
+                        "collectibles": null,
+                        "display_name_styles": null,
+                        "banner_color": "#100e14",
+                        "clan": null,
+                        "primary_guild": null
+                      },
+                      "mute": false,
+                      "deaf": false,
+                      "bio": "",
+                      "permissions": "2151613363244609"
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "platform": {
+                      "type": "string"
+                    },
+                    "reasonId": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "platform": "Discord",
+                  "reasonId": "Unauthorized",
+                  "data": {
+                    "message": "401: Unauthorized",
+                    "code": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "guild_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{target_guild_id}}"
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id_path}}"
+          }
+        ]
+      }
+    },
+    "/discord/user/profile/admin?force=&user_id={{target_user_id}}": {
+      "get": {
+        "summary": "admin",
+        "description": "",
+        "tags": ["discord_user_profile"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "avatar": {
+                      "type": "string"
+                    },
+                    "discriminator": {
+                      "type": "string"
+                    },
+                    "public_flags": {
+                      "type": "integer"
+                    },
+                    "flags": {
+                      "type": "integer"
+                    },
+                    "banner": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "accent_color": {
+                      "type": "integer"
+                    },
+                    "global_name": {
+                      "type": "string"
+                    },
+                    "avatar_decoration_data": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "collectibles": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "display_name_styles": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "banner_color": {
+                      "type": "string"
+                    },
+                    "clan": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "primary_guild": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  }
+                },
+                "examples": {
+                  "merciasquill": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "avatar": "cf2966973a8749d8cff395b483c8e039",
+                      "discriminator": "0",
+                      "public_flags": 0,
+                      "flags": 0,
+                      "banner": null,
+                      "accent_color": 1052180,
+                      "global_name": "Mercia's Quill",
+                      "avatar_decoration_data": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "banner_color": "#100e14",
+                      "clan": null,
+                      "primary_guild": null
+                    },
+                    "summary": "merciasquill"
+                  },
+                  "merciasquill_raw": {
+                    "value": {
+                      "id": "1248045928124907541",
+                      "username": "merciasquill",
+                      "avatar": "cf2966973a8749d8cff395b483c8e039",
+                      "discriminator": "0",
+                      "public_flags": 0,
+                      "flags": 0,
+                      "banner": null,
+                      "accent_color": 1052180,
+                      "global_name": "Mercia's Quill",
+                      "avatar_decoration_data": null,
+                      "collectibles": null,
+                      "display_name_styles": null,
+                      "banner_color": "#100e14",
+                      "clan": null,
+                      "primary_guild": null
+                    },
+                    "summary": "merciasquill_raw"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "force",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "raw_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_age",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10s"
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{target_user_id}}"
+          }
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.merciasquill.com"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "admin": {
+        "type": "object",
+        "properties": {
+          "refresh_token": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "public": {
+        "type": "object",
+        "properties": {
+          "refresh_token": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "user": {
+        "type": "object",
+        "properties": {
+          "refresh_token": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "admin_1": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "redirect_uri": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "public_1": {
+        "type": "object"
+      },
+      "unknown": {
+        "type": "object"
+      },
+      "user_1": {
+        "type": "object"
+      },
+      "public_2": {
+        "type": "object"
+      },
+      "user_2": {
+        "type": "object"
+      },
+      "public_3": {
+        "type": "object"
+      },
+      "user_3": {
+        "type": "object"
+      },
+      "public_4": {
+        "type": "object"
+      },
+      "user_4": {
+        "type": "object"
+      },
+      "public_5": {
+        "type": "object"
+      },
+      "user_5": {
+        "type": "object"
+      },
+      "admin_2": {
+        "type": "object"
+      }
+    },
+    "requestBodies": {
+      "admin": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/admin"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "public": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/public"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "user": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/user"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "admin_1": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/admin_1"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "public_1": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/public_1"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "unknown": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/unknown"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "user_1": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/user_1"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "public_2": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/public_2"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "user_2": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/user_2"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "public_3": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/public_3"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "user_3": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/user_3"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "public_4": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/public_4"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "user_4": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/user_4"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "public_5": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/public_5"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "user_5": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/user_5"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      },
+      "admin_2": {
+        "content": {
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/admin_2"
+            }
+          }
+        },
+        "description": "",
+        "required": true
+      }
+    },
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ]
+}
