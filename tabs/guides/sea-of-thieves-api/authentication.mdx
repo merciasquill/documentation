@@ -1,6 +1,6 @@
 ---
 title: "Authentication"
-description: "Learn how the Sea of Thieves website manages authentication and how Mercia's Quill accesses it"
+description: "Learn how authentication works for the Sea of Thieves API"
 icon: "fingerprint"
 mode: "default"
 ---
@@ -10,27 +10,26 @@ mode: "default"
 <Card icon="cookie-bite" href="https://web.dev/articles/understanding-cookies" cta="Learn more">
   ### Cookies
 
-Cookies are small pieces of data stored by the browser and automatically sent with requests to the server when you a visit a page. The [seaofthieves.com](https://seaofthieves.com) primarily uses cookies for the following purposes:
+Cookies are small pieces of data stored by the browser and automatically sent
+with requests to the server. The [seaofthieves.com](https://seaofthieves.com)
+uses cookies to:
 
-- Identify your currently logged in account
-- Persist your current login session across visits
-- Store your personal security and privacy preferences
+- Identify the currently authenticated account.
+- Persist the current login session across visits.
+- Store security and privacy preferences.
 
-In this context, Mercia's Quill will access your authentication cookies to impersonate both GET and POST/PUT requests as you.
+Cookies are included with requests to authenticate the current session.
 
 </Card>
 
 <br />
 
-<Card icon="bookmark" href="https://react.dev/learn/passing-data-deeply-with-context" cta="Learn more">
-  ### React Context
+<Card icon="code" href="https://react.dev/learn" cta="Learn more">
+  ### React `APP_PROPS`
 
-`APP_PROPS` is a page-level JavaScript variable embedded into every page's script tags when using React contexts. The [seaofthieves.com](https://seaofthieves.com) primarily uses React contexts for the following:
-
-- Storing quick access to your currently logged in account data
-- Storing and updating your [CSRF token](#csrf-token)
-
-In this context, Mercia's Quill will access your csrf token through the `APP_PROPS` context variable to impersonate POST/PUT requests as you.
+`APP_PROPS` is a JavaScript object embedded in the React application page. It
+contains page-level values used by the application, including the CSRF token.
+The object becomes accessible only after the DOM has loaded.
 
 </Card>
 
@@ -39,11 +38,13 @@ In this context, Mercia's Quill will access your csrf token through the `APP_PRO
 <Card icon="key" href="https://auth0.com/docs/secure/tokens/access-tokens/json-web-encryption" cta="Learn more">
   ### JSON Web Encryption
 
-JSON Web Encryption (JWE) is a standard for securely transmitting encrypted data. The [seaofthieves.com](https://seaofthieves.com) primarily uses JWEs for the following:
+JSON Web Encryption (JWE) is a standard for transmitting encrypted data. The
+[seaofthieves.com](https://seaofthieves.com) uses JWE to store and update the:
 
-- Storing and updating your [RAT token](#rat-token)
+- [RAT token](#rat-token).
 
-In this context, Mercia's Quill will access your rat JWE to impersonate both any requests as you.
+The `rat` JWE is included in the authentication cookie and authenticates
+requests for the current session.
 
 </Card>
 
@@ -56,17 +57,18 @@ In this context, Mercia's Quill will access your rat JWE to impersonate both any
 <Badge color="green">GET</Badge> <Badge color="blue">POST</Badge>
 <Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
 
-The `rat` cookie is the primary authentication method of authentication for the seaofthieves.com website and its internal APIs.
+The `rat` cookie is the primary authentication credential for
+the [seaofthieves.com](https://seaofthieves.com) website and its internal APIs.
 
 - Format: [JSON Web Encryption](#json-web-encryption)
 - Stored as: `rat` [cookie](#cookies)
 
-This token is automatically included in requests to the Sea of Thieves API via cookies and is required for accessing all login-protected endpoints. This token is the only value required to generate all other authentication values listed below so it essential to keep safe.
+The browser automatically includes this token in requests to the Sea of Thieves
+API. It is required for all login-protected endpoints and must be kept secure.
 
 <Danger>
-  The RAT token is essentially a password that will bypass all secondary
-  security methods and allow full control over your account until your password
-  is reset, or the token expires in 6 days.
+  The RAT token functions like a password and can provide full account access
+  until the password is reset or the token expires after six days.
 </Danger>
 
 ### User-Agent
@@ -74,35 +76,40 @@ This token is automatically included in requests to the Sea of Thieves API via c
 <Badge color="green">GET</Badge> <Badge color="blue">POST</Badge>
 <Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
 
-The `User-Agent` is a value generated at runtime by your browser and is used to identify your device type and data. To mimic a request made from a real device, this value is copied from your browser's headers.
+The `User-Agent` identifies the client software and device that make the request.
 
 - Format: Plain Text
 - Stored as: Generated headers
 
-### AWFS Token
+The `User-Agent` header is required for every request to prevent bot abuse challenges issued by Azure.
 
-<Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge>
-<Badge color="red">DELETE</Badge>
+### Referer
 
-The `awfs` cookie is a value that is connected to your [CSRF token](#csrf-token). Its true intended purpose is internal and publicly unknown.
+<Badge color="green">GET</Badge> <Badge color="blue">POST</Badge>
+<Badge color="yellow">PUT</Badge> <Badge color="red">DELETE</Badge>
 
-- Format: Plain Text
-- Stored as: `awfs` [cookie](#cookies)
+The `Referer` header identifies the page from which the request originated.
+
+- Format: URL
+- Stored as: Generated headers
+
+The path does not matter. The URL must use the
+`https://www.seaofthieves.com/` domain and must end with a forward slash (`/`).
 
 ### CSRF Token
 
 <Badge color="blue">POST</Badge> <Badge color="yellow">PUT</Badge>
 <Badge color="red">DELETE</Badge>
 
-The `csrf` page prop is a value made to prevent [cross-site request forgery](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF) attacks. This is meant to ensure that 3rd parties cannot mimic a client-side button / form to change your data. _(Mercia's Quill will override this)_
+The CSRF token protects state-changing requests from cross-site request
+forgery.
 
 - Format: Plain Text
-- Stored as: `csrf` [React context](#react-context)
+- Stored as: React [`APP_PROPS`](#react-app_props)
 
-<Warning>
-  Mercia's Quill will never use this token or attempt to mimic a POST/PUT
-  request using your credentials unless _explicitly_ prompted by you.
-</Warning>
+The token is stored in `APP_PROPS` and becomes accessible only after
+the DOM has loaded. Include it in the `X-CSRF-Token` header for every
+POST, PUT, or DELETE request.
 
 ---
 
@@ -112,18 +119,9 @@ The `csrf` page prop is a value made to prevent [cross-site request forgery](htt
 
 ```bash get_request_example.sh
 curl 'https://www.seaofthieves.com/api/endpoint' \
-  -H 'Cookie: rat=...; \
-  -H 'User-Agent: Mozilla/5.0'
-```
-
-```js get_request_example.js
-await fetch("https://www.seaofthieves.com/api/endpoint", {
-  method: "GET",
-  headers: {
-    Cookie: "rat=...;",
-    "User-Agent": "Mozilla/5.0",
-  },
-});
+  -H 'Cookie: rat=...' \
+  -H 'User-Agent: Mozilla/5.0' \
+  -H 'Referer: https://www.seaofthieves.com/'
 ```
 
 </CodeGroup>
@@ -132,20 +130,11 @@ await fetch("https://www.seaofthieves.com/api/endpoint", {
 
 ```bash put_request_example.sh
 curl 'https://www.seaofthieves.com/api/endpoint' \
-  -H 'Cookie: rat=...; awfs=...' \
+  -X PUT \
+  -H 'Cookie: rat=...' \
   -H 'User-Agent: Mozilla/5.0' \
-  -H 'X-CSRF-Token': ....'
-```
-
-```js put_request_example.js
-await fetch("https://www.seaofthieves.com/api/endpoint", {
-  method: "GET",
-  headers: {
-    Cookie: "rat=...; awfs=...",
-    "User-Agent": "Mozilla/5.0",
-    "X-CSRF-Token": "...",
-  },
-});
+  -H 'Referer: https://www.seaofthieves.com/' \
+  -H 'X-CSRF-Token: ...'
 ```
 
 </CodeGroup>
