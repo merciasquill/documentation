@@ -1,74 +1,127 @@
 ---
 title: "Browser Extension"
-description: "Learn how to configure the Mercia's Quill browser extension to control how your data is stored and managed"
+description: "Learn how to install and use the Mercia's Quill browser extension"
 icon: "puzzle-piece"
 ---
 
 ## Installation
 
 <Tabs>
-  <Tab title="Chromium" >
-   For all <Tooltip tip="Chrome, Brave, Opera, etc.">Chromium-based</Tooltip> browsers, you can install the Mercia's Quill extension from the native [Chrome Web Store](https://merciasquill.com/extension?chromium).
+  <Tab title="Google Chrome" icon="chrome">
+    <Card
+      title="Chrome Web Store"
+      icon="chrome"
+      href="https://www.merciasquill.com/extension?chromium"
+      horizontal
+      arrow="true"
+     >
+      Install the Mercia's Quill extension from the Chrome Web Store.
+    </Card>
+  </Tab>
+
+  <Tab title="Microsoft Edge" icon="edge">
+    <Card
+      title="Microsoft Edge Add-ons"
+      icon="edge"
+      href="https://www.merciasquill.com/extension?edge"
+      horizontal
+      arrow="true"
+     >
+      Install the Mercia's Quill extension from Microsoft Edge Add-ons.
+    </Card>
+
+    <Card
+      title="Chrome Web Store"
+      icon="chrome"
+      href="https://www.merciasquill.com/extension?chromium"
+      horizontal
+      arrow="true"
+     >
+      Install the Mercia's Quill extension from the Chrome Web Store.
+    </Card>
 
   </Tab>
 
-  <Tab title="Microsoft Edge">
-    For Microsoft Edge, you can install the Mercia's Quill extension from the native [Edge Add-ons](https://merciasquill.com/extension?edge), or the [Chrome Web Store](https://merciasquill.com/extension?chromium).
+<Tab title="Mozilla Firefox" icon="firefox-browser">
+  <Card
+    title="Firefox Add-ons"
+    icon="firefox-browser"
+    href="https://www.merciasquill.com/extension?firefox"
+    horizontal
+    arrow="true"
+  >
+    Install the Mercia's Quill extension from Firefox Add-ons.
+  </Card>
+</Tab>
 
-    <Note>
-      Edge Add-ons can take up to 2 weeks longer than the Chrome Web Store to
-      approve any updates to extensions.
-    </Note>
+<Tab title="Apple Safari" icon="safari">
+  <Info>
+    Mercia's Quill does not currently support Safari because of Apple's
+    developer costs. Install the extension in a supported browser to sync your
+    data.
+  </Info>
+</Tab>
 
-  </Tab>
+<Tab title="Chromium" icon="opera">
+  <Card
+    title="Chrome Web Store"
+    icon="opera"
+    href="https://www.merciasquill.com/extension?chromium"
+    horizontal
+    arrow="true"
+  >
+    Install the Mercia's Quill extension from the Chrome Web Store.
+  </Card>
+</Tab>
 
-  <Tab title="Mozilla Firefox">
-
-    For Mozilla Firefox, you can install the Mercia's Quill extension from the
-    native [Firefox Add-ons](https://merciasquill.com/extension?firefox).
-
-  </Tab>
-
-  <Tab title="Apple Safari">
-
-    <Info>
-      Due to Apple's developer costs of $99/year, Mercia's Quill will not be
-      supported in Safari for the foreseeable future. Consider installing a
-      different browser to sync your data.
-    </Info>
-
-  </Tab>
-
-  <Tab title="Other">
-    Did we miss a browser? Let us know by reaching out in our Discord [support server](https://merciasquill.com/support).
+  <Tab title="Other" icon="globe">
+    <Card
+      title="Mercia's Quill Support"
+      icon="globe"
+      href="https://www.merciasquill.com/support"
+      horizontal
+      arrow="true"
+     >
+      Is your browser not listed? Contact our development team.
+    </Card>
   </Tab>
 </Tabs>
 
 ---
 
-## Credential Storage Options
+## Quick Setup
 
-Mercia's Quill's extension allows you to configure where your [cookies](/tabs/guides/sea-of-thieves-api/authentication#authentication-values) from seaofthieves.com will be copied to. By default, the extension will use server-side storage unless explicitly opted out.
-
-<Columns cols={2}>
-  <Column>
-    <Card title="Server-Side Storage" icon="server">
-      Your cookies from [seaofthieves.com](https://seaofthieves.com) will be
-      copied for storage internally in Mercia's Quill's databases. This method
-      will also enable background [fetching cycles](#fetch-cycles).
-    </Card>
-  </Column>
-  <Column>
-    <Card title="Client-Side Storage" icon="desktop">
-      Your cookies from [seaofthieves.com](https://seaofthieves.com) will be
-      copied for storage locally in your browser. Mercia's Quill's backend
-      servers will never be able to see your rat token.
-    </Card>
-  </Column>
-</Columns>
+1. Sign in to Mercia's Quill [here](https://auth.merciasquill.com/login).
+2. Sign into Sea of Thieves [here](https://www.seaofthieves.com/login).
+3. Open the extension from your browser toolbar and interact with the popup to verify that it is up to date.
 
 ---
 
-## Fetch Cycles
+## Core Extension Functionality
 
-Fetch cycles happen in the background when opting into server-side storage and periodically update your sea of thieves data. You are allowed the options of refreshing every 12, 24, 48, or 72 hours, or <Tooltip tip="set to 0">never</Tooltip>. If you want to graph your data without manually refreshing, this is the ideal method with server-side credential storage.
+This extension reads your Sea of Thieves RAT token and forwards it to Mercia's
+Quill's backend services until expiration. This allows accessing your Sea of Thieves data on-demand as needed to provide services. The [Authentication Guide](/tabs/guides/sea-of-thieves-api/authentication)
+explains the authentication values, including the RAT token, in greater detail.
+
+<Note>
+  Due to the sensitive nature of your Rat Token, several security measures are
+  in place to protect your data: all data is encrypted in transit and at rest,
+  all databases are IP-restricted.
+</Note>
+
+---
+
+## Managing Your Session
+
+The extension session is managed through Mercia's Quill global authentication. When
+you sign in to a Mercia's Quill service, the extension uses your most recently
+used account. To sign out, interact with the extension popup or visit
+[the sign-out page](https://auth.merciasquill.com/logout).
+
+---
+
+## Source Code
+
+If you would like to view the decompiled source for the extension or suggest a change, you can view the source code on GitHub. The extension is open-source and licensed under the MPL-2.0 License.
+
+<GitHub.Repo repo="merciasquill/extension" variant="flat" />
